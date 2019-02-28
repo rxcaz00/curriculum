@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Roberto Cabrales - Curriculum Vitae</title>
+    <link href="../static/css/estilo.css" th:href="@{/css/estilo.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!--titulo-->
+<h1 id="titulo">Curriculum Vitae</h1>
+<div class="super-container">
+    <!--nombre-->
+    <div class="container" id="header">
+        <img src="/images/perfil.JPG" th:src="@{/images/perfil.JPG}" id="foto">
+        <th th:text="${cv.apellidoPaterno} + ' ' + ${cv.apellidoMaterno}"></th><br>
+        <th th:text="${cv.nombre}"></th>
+    </div>
+
+    <div class="separator">
+        <img class="icono" src="/images/datos.png" th:src="@{/images/datos.png}">
+        Datos personales
+    </div>
+
+    <!--datos-->
+    <div class="container">
+        Dirección:  <th th:text="${cv.direccion}"></th><br><br>
+        Teléfono:  <th th:text="${cv.telefono}"></th><br><br>
+        Correo electrónico:  <th th:text="${cv.correo}"></th><br><br>
+    </div>
+
+    <div class="separator">
+        <img class="icono" src="/images/estudios.png" th:src="@{/images/estudios.png}">
+        Estudios
+    </div>
+
+    <!--estudios-->
+    <div class="container">
+        Universidad:  <th th:text="${cv.universidad}"></th><br>
+        <th th:text="${cv.carrera}"></th><br><br>
+        Preparatoria:  <th th:text="${cv.preparatoria}"></th><br>
+        <th th:text="${cv.capacitacion}"></th><br>
+    </div>
+
+    <div class="separator">
+        <img class="icono" src="/images/idiomas.png" th:src="@{/images/idiomas.png}">
+        Idiomas
+    </div>
+
+    <!--idiomas-->
+    <div class="container">
+        Idioma nativo:  <th th:text="${cv.idiomaNat}"></th><br><br>
+        Idiomas adicionales:  <th th:text="${cv.idiomas}"></th>
+    </div>
+</div>
+</body>
+</html>
