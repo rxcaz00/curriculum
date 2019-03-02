@@ -17,44 +17,44 @@
     <!--nombre-->
     <div class="container" id="header">
         <img src="/images/perfil.JPG" th:src="@{/images/perfil.JPG}" id="foto">
-        <th th:text="${cv.apellidoPaterno} + ' ' + ${cv.apellidoMaterno}"></th><br>
-        <th th:text="${cv.nombre}"></th>
+        <th th:text="#{apellidoPaterno} + ' ' + #{apellidoMaterno}"></th><br>
+        <th th:text="#{nombre}"></th>
     </div>
 
     <div class="separator">
         <img class="icono" src="/images/datos.png" th:src="@{/images/datos.png}">
-        Datos personales
+        <th th:text="#{titulo1}"></th>
     </div>
 
     <!--datos-->
     <div class="container">
-        Dirección:  <th th:text="${cv.direccion}"></th><br><br>
-        Teléfono:  <th th:text="${cv.telefono}"></th><br><br>
-        Correo electrónico:  <th th:text="${cv.correo}"></th><br><br>
+        <th th:text="#{EncDireccion}"></th><th th:text="#{direccion}"></th><br><br>
+        <th th:text="#{EncTelefono}"></th><th th:text="#{telefono}"></th><br><br>
+        <th th:text="#{EncCorreo}"></th><th th:text="#{correo}"></th><br><br>
     </div>
 
     <div class="separator">
         <img class="icono" src="/images/estudios.png" th:src="@{/images/estudios.png}">
-        Estudios
+        <th th:text="#{titulo2}"></th>
     </div>
 
     <!--estudios-->
     <div class="container">
-        Universidad:  <th th:text="${cv.universidad}"></th><br>
-        <th th:text="${cv.carrera}"></th><br><br>
-        Preparatoria:  <th th:text="${cv.preparatoria}"></th><br>
-        <th th:text="${cv.capacitacion}"></th><br>
+        <th th:text="#{EncUniversidad}"></th><th th:text="#{universidad}"></th><br>
+        <th th:text="#{carrera}"></th><br><br>
+        <th th:text="#{EncPreparatoria}"></th><th th:text="#{preparatoria}"></th><br>
+        <th th:text="#{capacitacion}"></th><br>
     </div>
 
     <div class="separator">
         <img class="icono" src="/images/idiomas.png" th:src="@{/images/idiomas.png}">
-        Idiomas
+        <th th:text="#{titulo3}"></th>
     </div>
 
     <!--idiomas-->
     <div class="container">
-        Idioma nativo:  <th th:text="${cv.idiomaNat}"></th><br><br>
-        Idiomas adicionales:  <th th:text="${cv.idiomas}"></th>
+        <th th:text="#{EncIdiomaNativo}"></th><th th:text="#{idiomaNativo}"></th><br><br>
+        <th th:text="#{EncIdiomas}"></th><th th:text="#{idiomas}"></th>
     </div>
 </div>
 </body>
